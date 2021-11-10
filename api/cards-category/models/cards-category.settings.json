@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cards_categories",
+  "info": {
+    "name": "cardsCategory",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cards_works": {
+      "via": "cards_category",
+      "collection": "cards-work"
+    },
+    "cards": {
+      "via": "cards_category",
+      "collection": "card"
+    },
+    "fieldWork": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

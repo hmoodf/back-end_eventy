@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "event_photos",
+  "info": {
+    "name": "eventsPhoto",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "eventID": {
+      "via": "eventPhotos",
+      "model": "event"
+    },
+    "eventPhotos": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    }
+  }
+}

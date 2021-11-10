@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "eventCategories",
+  "info": {
+    "name": "eventsCategory",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "events": {
+      "via": "eventsCategory",
+      "collection": "event"
+    },
+    "categoryName": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

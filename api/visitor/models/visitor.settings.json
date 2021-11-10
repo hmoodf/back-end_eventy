@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "visitors",
+  "info": {
+    "name": "visitor",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "eventID": {
+      "via": "visitor",
+      "collection": "event"
+    },
+    "userID": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "visitors"
+    }
+  }
+}

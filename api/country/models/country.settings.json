@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "countries",
+  "info": {
+    "name": "country",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users": {
+      "via": "countryID",
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "cities": {
+      "via": "countryID",
+      "collection": "city"
+    },
+    "countryName": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

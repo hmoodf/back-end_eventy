@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "participants",
+  "info": {
+    "name": "participant",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cards": {
+      "via": "participant",
+      "collection": "card"
+    },
+    "events": {
+      "via": "participant",
+      "collection": "event"
+    }
+  }
+}
